@@ -6,6 +6,7 @@ import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
+import com.google.gson.Gson;
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.route.model.DirectionsResponse;
 
@@ -30,7 +31,7 @@ public class DirectionService {
         return DirectionServiceHolder.instance;
     }
 
-    public void requestRouteDirection(List<Point> pointList) {
+    public void requestRouteDirection(List<Point> pointList, final DirectionServiceCallBack callBack) {
         StringBuilder pointStringBuilder = new StringBuilder("54.428887,24.429133;54.321749,24.458565;");
 //        for (Point point:
 //             pointList) {
@@ -57,6 +58,8 @@ public class DirectionService {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
+                DirectionsResponse directionsResponse = new Gson().fromJson(result,DirectionsResponse.class);
+                callBack.onCallBack(directionsResponse);
                 Log.i("DirectionService result", result);
 
             }

@@ -1,8 +1,11 @@
 package com.mapbox.mapboxsdk.testapp.activity.annotation;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.graphics.PointF;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,10 +13,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.annotations.Polyline;
+import com.mapbox.mapboxsdk.annotations.PolylineOptions;
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.location.LocationComponent;
@@ -26,6 +32,9 @@ import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.route.DirectionService;
+import com.mapbox.mapboxsdk.route.DirectionServiceCallBack;
+import com.mapbox.mapboxsdk.route.model.DirectionsResponse;
+import com.mapbox.mapboxsdk.route.model.LegStep;
 import com.mapbox.mapboxsdk.testapp.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -33,6 +42,7 @@ import org.jetbrains.annotations.NotNull;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Test activity showcasing to add a Marker on click.
@@ -40,6 +50,7 @@ import java.util.List;
  * Shows how to use a OnMapClickListener and a OnMapLongClickListener
  * </p>
  */
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class PressForMarkerActivity extends AppCompatActivity implements LocationEngineCallback<LocationEngineResult> {
 
   private MapView mapView;
@@ -88,6 +99,7 @@ public class PressForMarkerActivity extends AppCompatActivity implements Locatio
       @Override
       public void onClick(View v) {
 
+
       }
     });
 
@@ -116,8 +128,6 @@ public class PressForMarkerActivity extends AppCompatActivity implements Locatio
         }
       });
 
-
-
       mapboxMap.addOnMapLongClickListener(point -> {
         addMarker(point);
         return false;
@@ -139,7 +149,40 @@ public class PressForMarkerActivity extends AppCompatActivity implements Locatio
       pointList.add(Point.fromLngLat(marker.getPosition().getLongitude(),marker.getPosition().getLatitude()));
     }
 
-    DirectionService.getInstance().requestRouteDirection(pointList);
+    DirectionService.getInstance().requestRouteDirection(pointList, new DirectionServiceCallBack() {
+      @Override
+      public void onCallBack(DirectionsResponse directionsResponse) {
+        drawLine(directionsResponse);
+      }
+    });
+
+  }
+
+  private void drawLine(DirectionsResponse directionsResponse){
+
+    PolylineOptions polylineOptions = new PolylineOptions();
+
+    directionsResponse.getRoutes().get(0).getLegs().get(0).getSteps().forEach(new Consumer<LegStep>() {
+      @Override
+      public void accept(LegStep legStep) {
+        List<double[]> coordinates = legStep.getGeometry().getCoordinates();
+        for (double[] strArr:
+                coordinates) {
+          polylineOptions.add(new LatLng(strArr[1],strArr[0]));
+        }
+      }
+    });
+    Log.i("lxm adsad",Thread.currentThread().getName());
+
+    runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        polylineOptions.color(Color.parseColor("#6495ED"));
+        Polyline polylines = mapboxMap.addPolyline(polylineOptions);
+
+      }
+
+    });
 
   }
 

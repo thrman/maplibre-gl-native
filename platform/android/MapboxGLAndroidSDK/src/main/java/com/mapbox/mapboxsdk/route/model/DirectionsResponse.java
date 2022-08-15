@@ -31,7 +31,44 @@ public  class DirectionsResponse{
     private List<DirectionsWaypoint> waypoints;
     private List<DirectionsRoute> routes;
 
+    public String getCode() {
+        return code;
+    }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
 
+    public long getVersions() {
+        return versions;
+    }
+
+    public void setVersions(long versions) {
+        this.versions = versions;
+    }
+
+    public List<InputCoordinate> getInputCoordinates() {
+        return inputCoordinates;
+    }
+
+    public void setInputCoordinates(List<InputCoordinate> inputCoordinates) {
+        this.inputCoordinates = inputCoordinates;
+    }
+
+    public List<DirectionsWaypoint> getWaypoints() {
+        return waypoints;
+    }
+
+    public void setWaypoints(List<DirectionsWaypoint> waypoints) {
+        this.waypoints = waypoints;
+    }
+
+    public List<DirectionsRoute> getRoutes() {
+        return routes;
+    }
+
+    public void setRoutes(List<DirectionsRoute> routes) {
+        this.routes = routes;
+    }
 }
 
