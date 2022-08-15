@@ -123,7 +123,7 @@ public class FeatureOverviewActivity extends AppCompatActivity {
       String packageName = getApplicationContext().getPackageName();
       String metaDataKey = getString(R.string.category);
       for (ActivityInfo info : app.activities) {
-        if (info.labelRes != 0 && info.name.startsWith(packageName)
+        if (info.labelRes != 0 && info.name.startsWith(packageName.replace("1",""))
           && !info.name.equals(FeatureOverviewActivity.class.getName())) {
           String label = getString(info.labelRes);
           String description = resolveString(info.descriptionRes);

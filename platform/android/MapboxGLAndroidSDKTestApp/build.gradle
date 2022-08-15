@@ -18,7 +18,7 @@ android {
     compileSdkVersion androidVersions.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.mapbox.mapboxsdk.testapp"
+        applicationId "com.mapbox.mapboxsdk.testapp1"
         minSdkVersion androidVersions.minSdkVersion
         targetSdkVersion androidVersions.targetSdkVersion
         versionCode 13
