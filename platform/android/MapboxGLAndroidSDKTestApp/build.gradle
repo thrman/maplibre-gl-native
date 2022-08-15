@@ -1,5 +1,18 @@
 apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 apply from: "${rootDir}/gradle/native-build.gradle"
+
+apply from: "${rootDir}/gradle/gradle-make.gradle"
+apply from: "${rootDir}/gradle/gradle-config.gradle"
+apply from: "${rootDir}/gradle/gradle-checkstyle.gradle"
+apply from: "${rootDir}/gradle/gradle-lint.gradle"
+
+
+
+
 
 android {
     compileSdkVersion androidVersions.compileSdkVersion
@@ -39,6 +52,7 @@ android {
             testCoverageEnabled true
             minifyEnabled false
             shrinkResources false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
@@ -51,15 +65,29 @@ android {
 
     dexOptions {
         maxProcessCount 8
-        javaMaxHeapSize "2g"
+        javaMaxHeapSize "6g"
         preDexLibraries true
     }
+    androidExtensions {
+        experimental = true
+    }
 }
+
+//repositories {
+//    flatDir {
+//        dirs 'libs'
+//    }
+//}
 
 dependencies {
     implementation dependenciesList.kotlinLib
 
-    implementation project(':MapboxGLAndroidSDK')
+    if (!project.hasProperty('mapbox.build.source') || project.findProperty('mapbox.build.source')=='false') {
+        implementation project(':MapboxGLAndroidSDK')
+    } else {
+        implementation(fileTree("libs"))
+        implementation dependenciesList.mapboxAndroidGestures
+    }
     implementation dependenciesList.mapboxJavaTurf
 
     implementation dependenciesList.supportAppcompatV7
@@ -85,12 +113,4 @@ dependencies {
     androidTestImplementation dependenciesList.appCenter
 }
 
-apply from: "${rootDir}/gradle/gradle-make.gradle"
-apply from: "${rootDir}/gradle/gradle-config.gradle"
-apply from: "${rootDir}/gradle/gradle-checkstyle.gradle"
-apply from: "${rootDir}/gradle/gradle-lint.gradle"
 
-
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
