@@ -257,6 +257,7 @@ namespace mbgl {
 
     TileServerOptions TileServerOptions::MapTilerConfiguration() {
 
+        // todo jd 2022.8.16 更改maptiler为gomap配置---------------------------------------------------------->>>>
         std::vector<mbgl::util::DefaultStyle> styles{
                 mbgl::util::DefaultStyle("maptiler://maps/streets", "Streets", 1),
                 mbgl::util::DefaultStyle("maptiler://maps/outdoor", "Outdoor", 1),
@@ -266,20 +267,50 @@ namespace mbgl {
                 mbgl::util::DefaultStyle("maptiler://maps/hybrid", "Satellite Hybrid", 1),
                 mbgl::util::DefaultStyle("maptiler://maps/topo", "Satellite Topo", 1)
         };
-
         TileServerOptions options = TileServerOptions()
-            .withBaseURL("https://api.maptiler.com")
-            .withUriSchemeAlias("maptiler")
-            .withApiKeyParameterName("key")
-            .withSourceTemplate("/tiles{path}/tiles.json", "sources", {})
-            .withStyleTemplate("/maps{path}/style.json", "maps", {})
-            .withSpritesTemplate("/maps{path}", "sprites", {})
-            .withGlyphsTemplate("/fonts{path}", "fonts", {})
-            .withTileTemplate("{path}", "tiles", {})
-            .withDefaultStyles(styles)
-            .withDefaultStyle("Streets")
-            .setRequiresApiKey(true);
+                .withBaseURL("https://gomap-dev.kharita.ai")
+                .withUriSchemeAlias("maptiler")
+                .withApiKeyParameterName("")
+                .withSourceTemplate("/map-tile-basic/tiles{path}/tiles.json", "sources", {})
+                .withStyleTemplate("/navigation-static/resource/maps{path}/style.json", "maps", {})
+                .withSpritesTemplate("/navigation-static/resource/maps{path}", "sprites", {})
+                .withGlyphsTemplate("/fonts{path}", "fonts", {})
+                .withTileTemplate("{path}", "tiles", {})
+                .withDefaultStyles(styles)
+                .withDefaultStyle("Streets")
+                .setRequiresApiKey(true);
         return options;
+       // todo jd 2022.8.16 ----------------------------------------------------------<<<<
+
+
+
+       //todo jd 2022.8.16 原有maptiler配置---------------------------------------------->>>>
+
+//        std::vector<mbgl::util::DefaultStyle> styles{
+//                mbgl::util::DefaultStyle("maptiler://maps/streets", "Streets", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/outdoor", "Outdoor", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/basic", "Basic", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/bright", "Bright", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/pastel", "Pastel", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/hybrid", "Satellite Hybrid", 1),
+//                mbgl::util::DefaultStyle("maptiler://maps/topo", "Satellite Topo", 1)
+//        };
+//
+//        TileServerOptions options = TileServerOptions()
+//            .withBaseURL("https://api.maptiler.com")
+//            .withUriSchemeAlias("maptiler")
+//            .withApiKeyParameterName("key")
+//            .withSourceTemplate("/tiles{path}/tiles.json", "sources", {})
+//            .withStyleTemplate("/maps{path}/style.json", "maps", {})
+//            .withSpritesTemplate("/maps{path}", "sprites", {})
+//            .withGlyphsTemplate("/fonts{path}", "fonts", {})
+//            .withTileTemplate("{path}", "tiles", {})
+//            .withDefaultStyles(styles)
+//            .withDefaultStyle("Streets")
+//            .setRequiresApiKey(true);
+//        return options;
+
+    //todo jd 2022.8.16 原有maptiler配置 --------------------------------------------<<<<
     }
 
 }  // namespace mbgl
