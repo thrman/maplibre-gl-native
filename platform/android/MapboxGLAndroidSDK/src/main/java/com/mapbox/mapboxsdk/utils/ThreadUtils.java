@@ -2,6 +2,7 @@ package com.mapbox.mapboxsdk.utils;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.os.Handler;
 import android.os.Looper;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,8 @@ import com.mapbox.mapboxsdk.exceptions.CalledFromWorkerThreadException;
 public class ThreadUtils {
 
   private static Boolean debug;
+
+  private static Handler mainHandler = new Handler(Looper.getMainLooper());
 
   /**
    * Initialises the thread utils, verifies debug state of the consuming app.
@@ -46,5 +49,9 @@ public class ThreadUtils {
         );
       }
     }
+  }
+
+  public static void runMain(Runnable runnable) {
+    mainHandler.post(runnable);
   }
 }

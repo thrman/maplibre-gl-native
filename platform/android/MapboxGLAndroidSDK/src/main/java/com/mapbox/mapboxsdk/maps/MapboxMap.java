@@ -2,6 +2,7 @@ package com.mapbox.mapboxsdk.maps;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.os.Bundle;
@@ -40,10 +41,14 @@ import com.mapbox.mapboxsdk.geometry.LatLngBounds;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.log.Logger;
 import com.mapbox.mapboxsdk.offline.OfflineRegionDefinition;
+import com.mapbox.mapboxsdk.route.model.LegStep;
+import com.mapbox.mapboxsdk.route.model.RouteLeg;
 import com.mapbox.mapboxsdk.style.expressions.Expression;
+import com.mapbox.mapboxsdk.utils.ThreadUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * The general class to interact with in the Android Mapbox SDK. It exposes the entry point for all
@@ -1059,10 +1064,51 @@ public final class MapboxMap {
    * use <a href="https://github.com/mapbox/mapbox-plugins-android/tree/master/plugin-annotation">
    * Mapbox Annotation Plugin</a> instead
    */
+
   @Deprecated
   @NonNull
   public Polyline addPolyline(@NonNull PolylineOptions polylineOptions) {
     return annotationManager.addPolyline(polylineOptions, this);
+  }
+
+  /**
+   *
+   */
+  @Deprecated
+  public void clearDrawLine() {
+    annotationManager.removeAnnotations();
+  }
+
+  /**
+   *
+   * @param routeLeg
+   */
+  @Deprecated
+  @NonNull
+  public void drawRouteLine(@NonNull RouteLeg routeLeg) {
+
+    final PolylineOptions polylineOptions = new PolylineOptions();
+    polylineOptions.color(Color.parseColor("#6495ED"));
+
+    routeLeg.getSteps().forEach(new Consumer<LegStep>() {
+      @Override
+      public void accept(LegStep legStep) {
+        List<double[]> coordinates = legStep.getGeometry().getCoordinates();
+        for (double[] strArr:
+                coordinates) {
+          polylineOptions.add(new LatLng(strArr[1],strArr[0]));
+        }
+      }
+    });
+
+    ThreadUtils.runMain(new Runnable() {
+
+      @Override
+      public void run() {
+        annotationManager.addPolyline(polylineOptions, MapboxMap.this);
+      }
+    });
+
   }
 
   /**

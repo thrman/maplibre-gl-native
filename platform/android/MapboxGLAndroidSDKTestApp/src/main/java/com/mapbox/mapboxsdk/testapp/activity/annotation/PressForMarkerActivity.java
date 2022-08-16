@@ -160,29 +160,7 @@ public class PressForMarkerActivity extends AppCompatActivity implements Locatio
 
   private void drawLine(DirectionsResponse directionsResponse){
 
-    PolylineOptions polylineOptions = new PolylineOptions();
-
-    directionsResponse.getRoutes().get(0).getLegs().get(0).getSteps().forEach(new Consumer<LegStep>() {
-      @Override
-      public void accept(LegStep legStep) {
-        List<double[]> coordinates = legStep.getGeometry().getCoordinates();
-        for (double[] strArr:
-                coordinates) {
-          polylineOptions.add(new LatLng(strArr[1],strArr[0]));
-        }
-      }
-    });
-    Log.i("lxm adsad",Thread.currentThread().getName());
-
-    runOnUiThread(new Runnable() {
-      @Override
-      public void run() {
-        polylineOptions.color(Color.parseColor("#6495ED"));
-        Polyline polylines = mapboxMap.addPolyline(polylineOptions);
-
-      }
-
-    });
+    mapboxMap.drawRouteLine(directionsResponse.getRoutes().get(0).getLegs().get(0));
 
   }
 

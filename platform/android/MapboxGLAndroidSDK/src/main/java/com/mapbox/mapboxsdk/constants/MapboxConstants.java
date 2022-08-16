@@ -199,6 +199,14 @@ public class MapboxConstants {
    */
   public static final String LAYER_ID_ANNOTATIONS = "com.mapbox.annotations.points";
 
+
+  /**
+   * Base URL for all API calls, not hardcoded to enable testing.
+   *
+   * @since 1.0.0
+   */
+  public static final String BASE_API_URL = "https://gomap-dev.kharita.ai";
+
   // Save instance state keys
   public static final String STATE_HAS_SAVED_STATE = "mapbox_savedState";
   public static final String STATE_CAMERA_POSITION = "mapbox_cameraPosition";
