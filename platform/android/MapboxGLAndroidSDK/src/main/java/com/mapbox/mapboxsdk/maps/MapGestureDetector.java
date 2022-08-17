@@ -121,7 +121,7 @@ final class MapGestureDetector {
     if (attachDefaultListeners) {
       StandardGestureListener standardGestureListener = new StandardGestureListener(
         context.getResources().getDimension(
-          com.mapbox.android.gestures.R.dimen.mapbox_defaultScaleSpanSinceStartThreshold));
+          R.dimen.mapbox_defaultScaleSpanSinceStartThreshold));
       MoveGestureListener moveGestureListener = new MoveGestureListener();
       ScaleGestureListener scaleGestureListener = new ScaleGestureListener(
         context.getResources().getDimension(R.dimen.mapbox_density_constant),
@@ -135,7 +135,7 @@ final class MapGestureDetector {
         context.getResources().getDimension(R.dimen.mapbox_angular_velocity_multiplier),
         context.getResources().getDimension(R.dimen.mapbox_minimum_angular_velocity),
         context.getResources().getDimension(
-          com.mapbox.android.gestures.R.dimen.mapbox_defaultScaleSpanSinceStartThreshold));
+          R.dimen.mapbox_defaultScaleSpanSinceStartThreshold));
       ShoveGestureListener shoveGestureListener = new ShoveGestureListener();
       TapGestureListener tapGestureListener = new TapGestureListener();
 
