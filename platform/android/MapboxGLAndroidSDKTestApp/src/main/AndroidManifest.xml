@@ -42,7 +42,7 @@
         </activity>
 
         <activity
-            android:name="com.mapbox.sdk.testapp.activity.maplayout.SimpleMapActivity"
+            android:name=".activity.maplayout.SimpleMapActivity"
             android:description="@string/description_simple_map"
             android:exported="true"
             android:label="@string/activity_simple_map"
