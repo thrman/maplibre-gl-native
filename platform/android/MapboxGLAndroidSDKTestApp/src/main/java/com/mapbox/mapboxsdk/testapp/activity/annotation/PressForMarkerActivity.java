@@ -159,9 +159,7 @@ public class PressForMarkerActivity extends AppCompatActivity implements Locatio
   }
 
   private void drawLine(DirectionsResponse directionsResponse){
-
-    mapboxMap.drawRouteLine(directionsResponse.getRoutes().get(0).getLegs().get(0));
-
+    mapboxMap.drawRouteLine(directionsResponse.getRoutes().get(0));
   }
 
   private void addMarker(LatLng point) {

@@ -4,6 +4,13 @@ apply plugin: 'kotlin-android'
 apply from: "${rootDir}/gradle/native-build.gradle"
 apply plugin: 'com.mapbox.android.sdk.versions'
 
+
+static def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyy-MM-dd-HH-mm')
+    return formattedDate
+}
+
 dependencies {
     lintChecks project(":MapboxGLAndroidSDKLint")
     api dependenciesList.mapboxJavaGeoJSON
@@ -30,6 +37,8 @@ android {
     defaultConfig {
         minSdkVersion androidVersions.minSdkVersion
         targetSdkVersion androidVersions.targetSdkVersion
+        versionCode 1
+        versionName "0.0.1"
         buildConfigField "String", "GIT_REVISION_SHORT", String.format("\"%s\"", getGitRevision())
         buildConfigField "String", "MAPBOX_SDK_IDENTIFIER", String.format("\"%s\"", "mapbox-maps-android")
         buildConfigField "String", "MAPBOX_SDK_VERSION", String.format("\"%s\"", project.VERSION_NAME)
@@ -78,6 +87,20 @@ android {
             jniDebuggable true
         }
     }
+
+    android.libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            def buildTime = getDate()
+            def version = 'v' + versionName
+            if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                outputFileName = version + '_' +
+                        variant.buildType.name + '_' + buildTime + '.aar'
+            }
+        }
+    }
+
+
 }
 
 licenseReport {

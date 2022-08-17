@@ -52,7 +52,7 @@ public class DirectionService {
         }else {
             stringBuilder.append("/map-route-driving/route/v1/driving/");
         }
-        stringBuilder.append(pointStr+"?overview=false&alternatives=true&steps=true&annotations=true&geometries=geojson&hints=;");
+        stringBuilder.append(pointStr+"?overview=false&alternatives=true&steps=true&annotations=true&geometries=geojson");
         String url = stringBuilder.toString();
 
         Log.i("DirectionService requestRouteDirection", url);

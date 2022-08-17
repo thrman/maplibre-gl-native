@@ -41,6 +41,7 @@ import com.mapbox.mapboxsdk.geometry.LatLngBounds;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.log.Logger;
 import com.mapbox.mapboxsdk.offline.OfflineRegionDefinition;
+import com.mapbox.mapboxsdk.route.model.DirectionsRoute;
 import com.mapbox.mapboxsdk.route.model.LegStep;
 import com.mapbox.mapboxsdk.route.model.RouteLeg;
 import com.mapbox.mapboxsdk.style.expressions.Expression;
@@ -1081,26 +1082,26 @@ public final class MapboxMap {
 
   /**
    *
-   * @param routeLeg
+   * @param directionsRoute
+   * draw one route
    */
   @Deprecated
   @NonNull
-  public void drawRouteLine(@NonNull RouteLeg routeLeg) {
+  public void drawRouteLine(@NonNull DirectionsRoute directionsRoute) {
 
     final PolylineOptions polylineOptions = new PolylineOptions();
     polylineOptions.color(Color.parseColor("#6495ED"));
-
-    routeLeg.getSteps().forEach(new Consumer<LegStep>() {
-      @Override
-      public void accept(LegStep legStep) {
+    for (RouteLeg routeLeg:
+    directionsRoute.getLegs()) {
+      for (LegStep legStep :
+              routeLeg.getSteps()) {
         List<double[]> coordinates = legStep.getGeometry().getCoordinates();
-        for (double[] strArr:
+        for (double[] strArr :
                 coordinates) {
-          polylineOptions.add(new LatLng(strArr[1],strArr[0]));
+          polylineOptions.add(new LatLng(strArr[1], strArr[0]));
         }
       }
-    });
-
+    }
     ThreadUtils.runMain(new Runnable() {
 
       @Override
