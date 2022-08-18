@@ -216,9 +216,9 @@ public class MapView extends FrameLayout implements NativeMapView.ViewCallback {
     attrView.setClickable(true);
     attrView.setFocusable(true);
     attrView.setContentDescription(getResources().getString(R.string.mapbox_attributionsIconContentDescription));
-    attrView.setImageDrawable(BitmapUtils.getDrawableFromRes(getContext(), R.drawable.mapbox_info_bg_selector));
+//    attrView.setImageDrawable(BitmapUtils.getDrawableFromRes(getContext(), R.drawable.mapbox_info_bg_selector));
     // inject widgets with MapboxMap
-    attrView.setOnClickListener(attributionClickListener = new AttributionClickListener(getContext(), mapboxMap));
+//    attrView.setOnClickListener(attributionClickListener = new AttributionClickListener(getContext(), mapboxMap));
     return attrView;
   }
 
