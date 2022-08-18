@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mapbox.mapboxsdk.testapp">
+    package="com.mapbox.sdk.testapp">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -980,7 +980,7 @@
                 android:value="@string/category_camera" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mapbox.mapboxsdk.testapp.activity.FeatureOverviewActivity" />
+                android:value="com.mapbox.sdk.testapp.activity.FeatureOverviewActivity" />
         </activity>
         <activity
             android:name=".activity.offline.MergeOfflineRegionsActivity"
@@ -992,7 +992,7 @@
                 android:value="@string/category_offline" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mapbox.mapboxsdk.testapp.activity.FeatureOverviewActivity" />
+                android:value="com.mapbox.sdk.testapp.activity.FeatureOverviewActivity" />
         </activity>
         <activity
             android:name=".activity.location.LocationMapChangeActivity"

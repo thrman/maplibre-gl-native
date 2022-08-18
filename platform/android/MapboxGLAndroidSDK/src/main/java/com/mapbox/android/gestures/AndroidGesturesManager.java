@@ -5,7 +5,7 @@ import android.os.Build;
 import android.view.MotionEvent;
 import androidx.annotation.UiThread;
 
-import com.mapbox.mapboxsdk.R;
+import com.gomap.sdk.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

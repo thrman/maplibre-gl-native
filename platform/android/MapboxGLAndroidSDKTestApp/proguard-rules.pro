@@ -11,4 +11,4 @@
 # GMS
 -dontnote com.google.android.gms.**
 
--keep class com.mapbox.mapboxsdk.testapp.model.customlayer.ExampleCustomLayer { *; }
+-keep class com.mapbox.sdk.testapp.model.customlayer.ExampleCustomLayer { *; }
