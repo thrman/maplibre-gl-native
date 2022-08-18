@@ -6,10 +6,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.geojson.MultiLineString;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
+import com.gomap.geojson.MultiLineString;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.geometry.LatLngBounds;
 import com.gomap.sdk.maps.MapView;
 import com.gomap.sdk.maps.MapboxMap;

@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.mapbox.geojson.Feature
-import com.mapbox.geojson.FeatureCollection
-import com.mapbox.geojson.LineString
-import com.mapbox.geojson.Point
+import com.gomap.geojson.Feature
+import com.gomap.geojson.FeatureCollection
+import com.gomap.geojson.LineString
+import com.gomap.geojson.Point
 import com.gomap.sdk.geometry.LatLng
 import com.gomap.sdk.geometry.LatLngBounds
 import com.gomap.sdk.maps.MapboxMap

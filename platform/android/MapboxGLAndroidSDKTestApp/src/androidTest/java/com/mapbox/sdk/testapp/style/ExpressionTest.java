@@ -4,8 +4,8 @@ import android.graphics.Color;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.style.expressions.Expression;
 import com.gomap.sdk.style.layers.CircleLayer;

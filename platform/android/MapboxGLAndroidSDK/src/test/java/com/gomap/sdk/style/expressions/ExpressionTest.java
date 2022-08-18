@@ -3,8 +3,8 @@ package com.gomap.sdk.style.expressions;
 import android.graphics.Color;
 
 import com.gomap.sdk.style.expressions.Expression;
-import com.mapbox.geojson.Point;
-import com.mapbox.geojson.Polygon;
+import com.gomap.geojson.Point;
+import com.gomap.geojson.Polygon;
 import com.gomap.sdk.style.layers.PropertyValue;
 import com.gomap.sdk.utils.ColorUtils;
 

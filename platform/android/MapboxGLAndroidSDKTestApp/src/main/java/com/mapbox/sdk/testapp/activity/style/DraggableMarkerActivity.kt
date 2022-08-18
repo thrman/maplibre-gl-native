@@ -6,12 +6,12 @@ import android.os.PersistableBundle
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.gomap.android.gestures.AndroidGesturesManager
+import com.gomap.android.gestures.MoveGestureDetector
 import com.google.android.material.snackbar.Snackbar
-import com.mapbox.android.gestures.AndroidGesturesManager
-import com.mapbox.android.gestures.MoveGestureDetector
-import com.mapbox.geojson.Feature
-import com.mapbox.geojson.FeatureCollection
-import com.mapbox.geojson.Point
+import com.gomap.geojson.Feature
+import com.gomap.geojson.FeatureCollection
+import com.gomap.geojson.Point
 import com.gomap.sdk.annotations.IconFactory
 import com.gomap.sdk.camera.CameraUpdateFactory
 import com.gomap.sdk.geometry.LatLng

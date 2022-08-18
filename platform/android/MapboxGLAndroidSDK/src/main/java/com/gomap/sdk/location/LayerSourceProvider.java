@@ -2,7 +2,7 @@ package com.gomap.sdk.location;
 
 import androidx.annotation.NonNull;
 
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 import com.gomap.sdk.style.layers.CircleLayer;
 import com.gomap.sdk.style.layers.Layer;
 import com.gomap.sdk.style.layers.Property;

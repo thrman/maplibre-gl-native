@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.res.Resources
 import android.content.res.TypedArray
 import com.gomap.sdk.maps.MapboxMapOptions
-import com.mapbox.sdk.R
+import com.gomap.sdk.R
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.RelaxedMockK

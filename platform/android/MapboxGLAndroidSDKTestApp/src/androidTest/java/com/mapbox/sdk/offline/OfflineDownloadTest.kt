@@ -2,7 +2,7 @@ package com.mapbox.sdk.offline
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import com.mapbox.geojson.Point
+import com.gomap.geojson.Point
 import com.gomap.sdk.log.Logger
 import com.gomap.sdk.maps.Style
 import com.gomap.sdk.offline.*

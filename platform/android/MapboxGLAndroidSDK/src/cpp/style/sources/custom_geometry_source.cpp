@@ -66,7 +66,7 @@ namespace android {
 
         // The source is removed on the main thread, but it still exists on the Render thread until the frame is complete.
         // This might cause fetchTile/cancelTile invocations when the Java thread is shutting down and the peer has already been released.
-        // See https://github.com/mapbox/mapbox-gl-native/issues/12551.
+        // See https://github.com/gomap/mapbox-gl-native/issues/12551.
         if(!javaPeer) {
             return;
         }
@@ -83,7 +83,7 @@ namespace android {
 
         // The source is removed on the main thread, but it still exists on the Render thread until the frame is complete.
         // This might cause fetchTile/cancelTile invocations when the Java thread is shutting down and the peer has already been released.
-        // See https://github.com/mapbox/mapbox-gl-native/issues/12551.
+        // See https://github.com/gomap/mapbox-gl-native/issues/12551.
         if(!javaPeer) {
             return;
         }

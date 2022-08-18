@@ -13,9 +13,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.mapbox.geojson.GeoJson;
-import com.mapbox.geojson.Polygon;
-import com.mapbox.geojson.gson.GeometryGeoJson;
+import com.gomap.geojson.GeoJson;
+import com.gomap.geojson.Polygon;
+import com.gomap.geojson.gson.GeometryGeoJson;
 import com.gomap.sdk.style.layers.PropertyFactory;
 import com.gomap.sdk.style.layers.PropertyValue;
 

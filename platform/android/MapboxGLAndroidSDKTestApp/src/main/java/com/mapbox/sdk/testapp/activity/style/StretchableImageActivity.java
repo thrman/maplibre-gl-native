@@ -7,9 +7,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.maps.ImageContent;
 import com.gomap.sdk.maps.ImageStretches;
 import com.gomap.sdk.maps.MapView;

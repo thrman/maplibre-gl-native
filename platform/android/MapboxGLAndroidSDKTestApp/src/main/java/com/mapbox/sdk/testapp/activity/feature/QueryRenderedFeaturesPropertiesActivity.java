@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.JsonElement;
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 import com.gomap.sdk.annotations.BaseMarkerOptions;
 import com.gomap.sdk.annotations.Marker;
 import com.gomap.sdk.geometry.LatLng;

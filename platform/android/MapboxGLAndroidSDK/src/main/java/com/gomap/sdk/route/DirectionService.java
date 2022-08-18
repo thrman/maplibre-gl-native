@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.gomap.sdk.constants.MapboxConstants;
 import com.google.gson.Gson;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.route.model.DirectionsResponse;
 import com.gomap.sdk.route.model.RouteType;
 

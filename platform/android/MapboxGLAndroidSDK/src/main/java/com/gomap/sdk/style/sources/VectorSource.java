@@ -9,7 +9,7 @@ import androidx.annotation.Size;
 import androidx.annotation.UiThread;
 
 import com.gomap.sdk.style.expressions.Expression;
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 
 import java.net.URL;
 import java.util.ArrayList;

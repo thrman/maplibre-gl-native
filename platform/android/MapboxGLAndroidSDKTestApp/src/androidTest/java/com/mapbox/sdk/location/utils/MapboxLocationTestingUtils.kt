@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable
 import android.location.Location
 import android.os.Handler
 import android.os.Looper
-import com.mapbox.geojson.Feature
+import com.gomap.geojson.Feature
 import com.gomap.sdk.geometry.LatLng
 import com.gomap.sdk.maps.MapboxMap
 import com.gomap.sdk.style.layers.Property

@@ -8,8 +8,8 @@ import androidx.annotation.WorkerThread;
 
 import com.gomap.sdk.geometry.LatLngBounds;
 import com.gomap.sdk.style.expressions.Expression;
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

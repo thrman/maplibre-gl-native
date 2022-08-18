@@ -20,8 +20,8 @@ import com.gomap.sdk.style.layers.Layer;
 import com.gomap.sdk.style.layers.TransitionOptions;
 import com.gomap.sdk.style.light.Light;
 import com.gomap.sdk.style.sources.Source;
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.Geometry;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.Geometry;
 
 import java.util.List;
 

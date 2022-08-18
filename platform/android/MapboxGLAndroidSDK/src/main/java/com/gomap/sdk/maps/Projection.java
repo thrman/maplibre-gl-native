@@ -10,7 +10,7 @@ import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.geometry.LatLngBounds;
 import com.gomap.sdk.geometry.ProjectedMeters;
 import com.gomap.sdk.geometry.VisibleRegion;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Point;
 
 import java.util.ArrayList;
 import java.util.List;

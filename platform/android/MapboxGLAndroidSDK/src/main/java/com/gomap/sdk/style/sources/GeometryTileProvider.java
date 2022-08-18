@@ -3,7 +3,7 @@ package com.gomap.sdk.style.sources;
 import androidx.annotation.WorkerThread;
 
 import com.gomap.sdk.geometry.LatLngBounds;
-import com.mapbox.geojson.FeatureCollection;
+import com.gomap.geojson.FeatureCollection;
 
 /**
  * Interface that defines methods for working with {@link CustomGeometrySource}.

@@ -5,8 +5,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mapbox.geojson.Point;
-import com.mapbox.geojson.Polygon;
+import com.gomap.geojson.Point;
+import com.gomap.geojson.Polygon;
 import com.gomap.sdk.camera.CameraPosition;
 import com.gomap.sdk.camera.CameraUpdateFactory;
 import com.gomap.sdk.geometry.LatLng;

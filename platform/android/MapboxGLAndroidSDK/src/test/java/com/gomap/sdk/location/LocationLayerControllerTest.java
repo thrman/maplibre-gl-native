@@ -15,7 +15,7 @@ import com.gomap.sdk.location.MapboxAnimator;
 import com.gomap.sdk.location.OnRenderModeChangedListener;
 import com.gomap.sdk.location.SymbolLocationLayerRenderer;
 import com.google.gson.JsonElement;
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.location.modes.RenderMode;
 import com.gomap.sdk.maps.MapboxMap;

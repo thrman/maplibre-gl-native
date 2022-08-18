@@ -6,9 +6,9 @@ import androidx.annotation.RawRes;
 import androidx.test.espresso.ViewAction;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.style.layers.CircleLayer;
 import com.gomap.sdk.style.layers.Layer;

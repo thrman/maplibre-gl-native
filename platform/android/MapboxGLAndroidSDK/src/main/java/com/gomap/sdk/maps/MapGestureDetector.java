@@ -16,13 +16,13 @@ import androidx.annotation.Nullable;
 
 import com.gomap.sdk.constants.MapboxConstants;
 import com.gomap.sdk.utils.MathUtils;
-import com.mapbox.android.gestures.AndroidGesturesManager;
-import com.mapbox.android.gestures.MoveGestureDetector;
-import com.mapbox.android.gestures.MultiFingerTapGestureDetector;
-import com.mapbox.android.gestures.RotateGestureDetector;
-import com.mapbox.android.gestures.ShoveGestureDetector;
-import com.mapbox.android.gestures.StandardGestureDetector;
-import com.mapbox.android.gestures.StandardScaleGestureDetector;
+import com.gomap.android.gestures.AndroidGesturesManager;
+import com.gomap.android.gestures.MoveGestureDetector;
+import com.gomap.android.gestures.MultiFingerTapGestureDetector;
+import com.gomap.android.gestures.RotateGestureDetector;
+import com.gomap.android.gestures.ShoveGestureDetector;
+import com.gomap.android.gestures.StandardGestureDetector;
+import com.gomap.android.gestures.StandardScaleGestureDetector;
 import com.gomap.sdk.R;
 
 import java.util.ArrayList;

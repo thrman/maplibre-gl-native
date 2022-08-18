@@ -7,12 +7,12 @@ import android.graphics.Color;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.mapbox.geojson.LineString;
-import com.mapbox.geojson.MultiLineString;
-import com.mapbox.geojson.MultiPoint;
-import com.mapbox.geojson.MultiPolygon;
-import com.mapbox.geojson.Point;
-import com.mapbox.geojson.Polygon;
+import com.gomap.geojson.LineString;
+import com.gomap.geojson.MultiLineString;
+import com.gomap.geojson.MultiPoint;
+import com.gomap.geojson.MultiPolygon;
+import com.gomap.geojson.Point;
+import com.gomap.geojson.Polygon;
 import com.mapbox.sdk.maps.BaseLayerTest;
 import com.gomap.sdk.style.expressions.Expression;
 import com.gomap.sdk.style.layers.LineLayer;

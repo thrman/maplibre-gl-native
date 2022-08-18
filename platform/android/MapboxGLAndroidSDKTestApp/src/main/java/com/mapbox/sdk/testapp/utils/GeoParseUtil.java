@@ -3,9 +3,9 @@ package com.mapbox.sdk.testapp.utils;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.geometry.LatLng;
 
 import java.io.BufferedReader;

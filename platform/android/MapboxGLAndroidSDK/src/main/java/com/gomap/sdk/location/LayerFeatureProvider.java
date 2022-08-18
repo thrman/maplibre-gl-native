@@ -3,8 +3,8 @@ package com.gomap.sdk.location;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.Point;
 
 import static com.gomap.sdk.location.LocationComponentConstants.PROPERTY_COMPASS_BEARING;
 import static com.gomap.sdk.location.LocationComponentConstants.PROPERTY_GPS_BEARING;

@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mapbox.geojson.Point
+import com.gomap.geojson.Point
 import com.gomap.sdk.camera.CameraPosition
 import com.gomap.sdk.geometry.LatLng
 import com.gomap.sdk.maps.MapboxMap
@@ -16,9 +16,9 @@ import com.gomap.sdk.style.layers.Property.NONE
 import com.gomap.sdk.style.layers.PropertyFactory.*
 import com.gomap.sdk.style.layers.SymbolLayer
 import com.gomap.sdk.style.sources.GeoJsonSource
+import com.gomap.turf.TurfConstants
+import com.gomap.turf.TurfTransformation
 import com.mapbox.sdk.testapp.R
-import com.mapbox.turf.TurfConstants
-import com.mapbox.turf.TurfTransformation
 import kotlinx.android.synthetic.main.activity_physical_circle.*
 
 /**

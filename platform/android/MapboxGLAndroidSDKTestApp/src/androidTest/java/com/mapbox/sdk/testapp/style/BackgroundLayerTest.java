@@ -7,7 +7,7 @@ import android.graphics.Color;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Point;
 import com.mapbox.sdk.maps.BaseLayerTest;
 import com.gomap.sdk.style.layers.BackgroundLayer;
 import com.gomap.sdk.style.layers.TransitionOptions;

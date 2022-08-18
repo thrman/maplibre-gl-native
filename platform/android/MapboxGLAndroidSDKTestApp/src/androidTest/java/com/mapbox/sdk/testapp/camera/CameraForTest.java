@@ -3,8 +3,8 @@ package com.mapbox.sdk.testapp.camera;
 import androidx.annotation.NonNull;
 import androidx.test.annotation.UiThreadTest;
 
-import com.mapbox.geojson.Point;
-import com.mapbox.geojson.Polygon;
+import com.gomap.geojson.Point;
+import com.gomap.geojson.Polygon;
 import com.gomap.sdk.camera.CameraPosition;
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.geometry.LatLngBounds;

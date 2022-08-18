@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
-import com.mapbox.android.gestures.AndroidGesturesManager;
-import com.mapbox.android.gestures.MoveGestureDetector;
-import com.mapbox.android.gestures.RotateGestureDetector;
+import com.gomap.android.gestures.AndroidGesturesManager;
+import com.gomap.android.gestures.MoveGestureDetector;
+import com.gomap.android.gestures.RotateGestureDetector;
 import com.gomap.sdk.camera.CameraPosition;
 import com.gomap.sdk.camera.CameraUpdate;
 import com.gomap.sdk.camera.CameraUpdateFactory;

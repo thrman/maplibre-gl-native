@@ -20,11 +20,11 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mapbox.android.gestures.AndroidGesturesManager;
-import com.mapbox.android.gestures.MoveGestureDetector;
-import com.mapbox.android.gestures.RotateGestureDetector;
-import com.mapbox.android.gestures.ShoveGestureDetector;
-import com.mapbox.android.gestures.StandardScaleGestureDetector;
+import com.gomap.android.gestures.AndroidGesturesManager;
+import com.gomap.android.gestures.MoveGestureDetector;
+import com.gomap.android.gestures.RotateGestureDetector;
+import com.gomap.android.gestures.ShoveGestureDetector;
+import com.gomap.android.gestures.StandardScaleGestureDetector;
 import com.gomap.sdk.annotations.Marker;
 import com.gomap.sdk.annotations.MarkerOptions;
 import com.gomap.sdk.camera.CameraUpdateFactory;

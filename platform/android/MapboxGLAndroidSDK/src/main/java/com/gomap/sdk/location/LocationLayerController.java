@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.location.modes.RenderMode;
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 import com.gomap.sdk.log.Logger;
 import com.gomap.sdk.maps.MapboxMap;
 import com.gomap.sdk.maps.Style;

@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.JsonElement;
-import com.mapbox.geojson.Feature;
+import com.gomap.geojson.Feature;
 import com.gomap.sdk.maps.MapView;
 import com.gomap.sdk.maps.MapboxMap;
 import com.gomap.sdk.maps.Style;

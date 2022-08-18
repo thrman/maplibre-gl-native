@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mapbox.geojson.*
+import com.gomap.geojson.*
 import com.gomap.sdk.camera.CameraPosition
 import com.gomap.sdk.camera.CameraUpdateFactory
 import com.gomap.sdk.geometry.LatLng

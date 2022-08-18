@@ -19,7 +19,7 @@ import com.gomap.sdk.location.modes.CameraMode;
 import com.gomap.sdk.location.modes.RenderMode;
 import com.gomap.sdk.maps.MapboxMap;
 import com.gomap.sdk.maps.Style;
-import com.mapbox.android.gestures.AndroidGesturesManager;
+import com.gomap.android.gestures.AndroidGesturesManager;
 import com.gomap.sdk.R;
 import com.gomap.sdk.style.layers.Layer;
 

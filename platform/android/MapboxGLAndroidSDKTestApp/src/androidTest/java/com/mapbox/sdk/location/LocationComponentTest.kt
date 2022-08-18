@@ -13,7 +13,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.GrantPermissionRule
-import com.mapbox.geojson.Point
+import com.gomap.geojson.Point
 import com.gomap.sdk.camera.CameraUpdateFactory
 import com.gomap.sdk.geometry.LatLng
 import com.gomap.sdk.location.*

@@ -12,9 +12,9 @@ import android.view.animation.LinearInterpolator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.JsonObject;
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.FeatureCollection;
-import com.mapbox.geojson.Point;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.FeatureCollection;
+import com.gomap.geojson.Point;
 import com.gomap.sdk.geometry.LatLng;
 import com.gomap.sdk.geometry.LatLngBounds;
 import com.gomap.sdk.maps.MapView;
@@ -23,7 +23,7 @@ import com.gomap.sdk.maps.Style;
 import com.gomap.sdk.style.layers.SymbolLayer;
 import com.gomap.sdk.style.sources.GeoJsonSource;
 import com.mapbox.sdk.testapp.R;
-import com.mapbox.turf.TurfMeasurement;
+import com.gomap.turf.TurfMeasurement;
 
 import java.util.ArrayList;
 import java.util.List;

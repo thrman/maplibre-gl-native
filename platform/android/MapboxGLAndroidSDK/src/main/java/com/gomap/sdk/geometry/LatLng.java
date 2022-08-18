@@ -10,10 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.gomap.sdk.constants.GeometryConstants;
-import com.mapbox.geojson.Point;
-import com.mapbox.turf.TurfMeasurement;
+import com.gomap.geojson.Point;
+import com.gomap.turf.TurfMeasurement;
 
-import static com.mapbox.turf.TurfConstants.UNIT_METRES;
+import static com.gomap.turf.TurfConstants.UNIT_METRES;
 
 
 /**

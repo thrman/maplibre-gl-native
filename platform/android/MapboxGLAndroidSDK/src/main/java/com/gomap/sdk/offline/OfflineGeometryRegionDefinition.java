@@ -7,9 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.gomap.sdk.geometry.LatLngBounds;
-import com.mapbox.geojson.Feature;
-import com.mapbox.geojson.Geometry;
-import com.mapbox.turf.TurfMeasurement;
+import com.gomap.geojson.Feature;
+import com.gomap.geojson.Geometry;
+import com.gomap.turf.TurfMeasurement;
 
 /**
  * An offline region defined by a style URL, geometry, zoom range, and

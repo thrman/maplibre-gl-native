@@ -30,7 +30,7 @@ import com.gomap.sdk.maps.renderer.textureview.TextureViewMapRenderer;
 import com.gomap.sdk.maps.widgets.CompassView;
 import com.gomap.sdk.storage.FileSource;
 import com.gomap.sdk.utils.BitmapUtils;
-import com.mapbox.android.gestures.AndroidGesturesManager;
+import com.gomap.android.gestures.AndroidGesturesManager;
 import com.gomap.sdk.MapStrictMode;
 import com.gomap.sdk.Mapbox;
 import com.gomap.sdk.R;
