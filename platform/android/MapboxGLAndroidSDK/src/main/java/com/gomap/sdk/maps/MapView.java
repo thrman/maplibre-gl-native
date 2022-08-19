@@ -1,5 +1,6 @@
 package com.gomap.sdk.maps;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.PointF;
@@ -12,6 +13,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
@@ -222,13 +224,15 @@ public class MapView extends FrameLayout implements NativeMapView.ViewCallback {
     return attrView;
   }
 
-  protected ImageView initialiseLogoView() {
-    ImageView logoView = new ImageView(this.getContext());
+  @SuppressLint("ResourceAsColor")
+  protected View initialiseLogoView() {
+    TextView logoView = new TextView(this.getContext());
     addView(logoView);
     logoView.setTag("logoView");
     logoView.getLayoutParams().width = LayoutParams.WRAP_CONTENT;
     logoView.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
-//    logoView.setImageDrawable(BitmapUtils.getDrawableFromRes(getContext(), R.drawable.mapbox_logo_icon));
+    logoView.setText(R.string.mapbox_logo_text);
+    logoView.setTextColor(R.color.color_444444);
     return logoView;
   }
 
@@ -286,11 +290,11 @@ public class MapView extends FrameLayout implements NativeMapView.ViewCallback {
    * You must call this method from the parent's Activity#onCreate(Bundle)} or
    * Fragment#onViewCreated(View, Bundle).
    * </p>
-   * You must set a valid access token with {@link Mapbox#getInstance(Context, String)}
+   * You must set a valid access token with {@link Mapbox#init(Context)}
    * before you call this method or an exception will be thrown.
    *
    * @param savedInstanceState Pass in the parent's savedInstanceState.
-   * @see Mapbox#getInstance(Context, String)
+   * @see Mapbox#init(Context)
    */
   @UiThread
   public void onCreate(@Nullable Bundle savedInstanceState) {

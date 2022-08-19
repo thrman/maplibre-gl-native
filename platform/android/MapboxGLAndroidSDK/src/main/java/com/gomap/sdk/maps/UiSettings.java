@@ -52,7 +52,7 @@ public final class UiSettings {
 
   @VisibleForTesting
   @Nullable
-  ImageView logoView;
+  View logoView;
   private final int[] logoMargins = new int[4];
 
   private final float pixelRatio;
