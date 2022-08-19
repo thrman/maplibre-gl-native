@@ -79,7 +79,7 @@ public class MapboxApplication extends Application {
     String apiKey = ApiKeyUtils.getApiKey(getApplicationContext());
     validateApiKey(apiKey);
 
-    Mapbox.getInstance(getApplicationContext(), apiKey, TILE_SERVER);
+    Mapbox.init(getApplicationContext());
 
     TileLoadingMeasurementUtils.setUpTileLoadingMeasurement();
 

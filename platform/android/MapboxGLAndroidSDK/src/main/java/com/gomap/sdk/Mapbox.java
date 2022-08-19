@@ -40,6 +40,31 @@ public final class Mapbox {
   @Nullable
   private TileServerOptions tileServerOptions;
 
+
+  @UiThread
+  @NonNull
+  public static synchronized Mapbox init(@NonNull Context context) {
+
+    String apiKey = "Z7E7B1Ba8vOFikFSFebS";
+    ThreadUtils.init(context);
+    ThreadUtils.checkThread(TAG);
+    if (INSTANCE == null) {
+      Context appContext = context.getApplicationContext();
+      FileSource.initializeFileDirsPaths(appContext);
+      INSTANCE = new Mapbox(appContext, apiKey);
+      ConnectivityReceiver.instance(appContext);
+    } else {
+      INSTANCE.apiKey = apiKey;
+    }
+
+    TileServerOptions tileServerOptions = TileServerOptions.get(WellKnownTileServer.MapTiler);
+    INSTANCE.tileServerOptions = tileServerOptions;
+    FileSource fileSource = FileSource.getInstance(context);
+    fileSource.setTileServerOptions(tileServerOptions);
+    fileSource.setApiKey(apiKey);
+    return INSTANCE;
+  }
+
   /**
    * Get an instance of Mapbox.
    * <p>
