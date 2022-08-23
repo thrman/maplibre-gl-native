@@ -54,7 +54,7 @@ public class PoiService {
 
         HashMap map = new HashMap<String,Object>();
         map.put("imei", Settings.System.getString(activity.getContentResolver(), Settings.Secure.ANDROID_ID));
-        map.put("radius",15000);
+        map.put("radius",radius);
 
         HashMap location = new HashMap<String,Object>();
         location.put("lng",center.getLongitude());
