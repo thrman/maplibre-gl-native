@@ -11,12 +11,12 @@
 -dontnote com.google.gson.**
 
 # dontnote for keeps the entry point x but not the descriptor class y
--dontnote com.mapbox.sdk.maps.MapboxMap$OnFpsChangedListener
--dontnote com.mapbox.sdk.style.layers.PropertyValue
--dontnote com.mapbox.sdk.maps.MapboxMap
--dontnote com.mapbox.sdk.maps.MapboxMapOptions
--dontnote com.mapbox.sdk.log.LoggerDefinition
--dontnote com.mapbox.sdk.location.engine.LocationEnginePriority
+-dontnote com.gomap.sdk.maps.MapboxMap$OnFpsChangedListener
+-dontnote com.gomap.sdk.style.layers.PropertyValue
+-dontnote com.gomap.sdk.maps.MapboxMap
+-dontnote com.gomap.sdk.maps.MapboxMapOptions
+-dontnote com.gomap.sdk.log.LoggerDefinition
+-dontnote com.gomap.sdk.location.engine.LocationEnginePriority
 
 # config for okhttp 3.11.0, https://github.com/square/okhttp/pull/3354
 -dontwarn javax.annotation.**
@@ -24,7 +24,7 @@
 -dontwarn org.codehaus.**
 
 # config for mapbox-sdk-geojson:3.0.1
--keep class com.mapbox.geojson.** { *; }
+-keep class com.gomap.geojson.** { *; }
 -dontwarn com.google.auto.value.**
 
 # config for additional notes
